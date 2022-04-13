@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { url } from '../commons/constants'
 import './signup.css'
+import { toast} from 'react-toastify'
 
 const Signup = () => {
   const [FirstName, setFirstName] = useState('')
@@ -30,14 +31,14 @@ const Signup = () => {
       if (result.status === 'success') {
         setDepts(result.data)
       } else {
-        alert('error while loading list of Depts')
+        toast.error('error while loading list of Depts')
       }
     })
   }
 
   const managerSet = () => {
     if (deptId.length === 0) {
-      alert('Select Department Id')
+      toast.error('Select Department Id')
     } else {
       (depts).map((id) => {
         if (deptId == id.deptId)
@@ -59,29 +60,29 @@ const Signup = () => {
 
   const addUserToDB = () => {
     if (FirstName.length === 0) {
-      alert('Enter First Name')
+      toast.error('Enter First Name')
     } else if (LastName.length === 0) {
-      alert('Enter Last Name')
+      toast.error('Enter Last Name')
     } else if (email.length === 0) {
-      alert('Enter Email')
+      toast.error('Enter Email')
     } else if (password.length === 0) {
-      alert('Enter Password')
+      toast.error('Enter Password')
     } else if (designation.length === 0) {
-      alert('Enter designation')
+      toast.error('Enter designation')
     } else if (salary.length === 0) {
-      alert('Enter salary')
+      toast.error('Enter salary')
     } else if (deptId.length === 0) {
-      alert('Enter Dept Id')
+      toast.error('Enter Dept Id')
     } else if (joinDate.length === 0) {
-      alert('Enter joinDate')
+      toast.error('Enter joinDate')
     } else if (!validateName(LastName)) {
-      alert('Invalid Last Name')
+      toast.error('Invalid Last Name')
     } else if (!validateName(FirstName)) {
-      alert('Invalid First Name')
+      toast.error('Invalid First Name')
     } else if (!validateEmail(email)) {
-      alert('Invalid Email')
+      toast.error('Invalid Email')
     } else if (managerId.length === 0) {
-      alert('Enter Manager Id')
+      toast.error('Enter Manager Id')
     } else {
       // when a file needs to be uploaded use FormData
       const data = new FormData()
@@ -100,11 +101,11 @@ const Signup = () => {
       axios.post(url + '/user/signup', data).then((response) => {
         const result = response.data
         if (result.status === 'success') {
-          alert('SignUp Successful')
+          toast.success('SignUp Successful')
           // go to SignIN page
           history.push('/signin')
         } else {
-          alert('error while adding employee')
+          toast.error('error while adding employee')
         }
       })
     }

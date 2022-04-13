@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { url } from '../commons/constants'
 import './signup.css'
+import { toast } from 'react-toastify'
 
 const EditProfile = () => {
   const [FirstName, setFirstName] = useState('')
@@ -55,29 +56,29 @@ const EditProfile = () => {
 
   const addUserToDB = () => {
     if (FirstName.length === 0) {
-      alert('Enter First Name')
+      toast.error('Enter First Name')
     } else if (LastName.length === 0) {
-      alert('Enter Last Name')
+      toast.error('Enter Last Name')
     } else if (email.length === 0) {
-      alert('Enter Email')
+      toast.error('Enter Email')
     } else if (gender.length === 0) {
-      alert('Enter gender')
+      toast.error('Enter gender')
     } else if (contact.length === 0) {
-      alert('Enter contact')
+      toast.error('Enter contact')
     } else if (address.length === 0) {
-      alert('Enter address')
+      toast.error('Enter address')
     } else if (birthDate.length === 0) {
-      alert('Enter birthDate')
+      toast.error('Enter birthDate')
     } else if (securityQuestion.length === 0) {
-      alert('Enter securityQuestion')
+      toast.error('Enter securityQuestion')
     } else if (!validateName(LastName)) {
-      alert('Invalid Last Name')
+      toast.error('Invalid Last Name')
     } else if (!validateName(FirstName)) {
-      alert('Invalid First Name')
+      toast.error('Invalid First Name')
     } else if (!validateContact(contact)) {
-      alert('Invalid Contact Number')
+      toast.error('Invalid Contact Number')
     } else if (!validateEmail(email)) {
-      alert('Invalid Email')
+      toast.error('Invalid Email')
     }
     else {
       // when a file needs to be uploaded use FormData
@@ -97,12 +98,12 @@ const EditProfile = () => {
       axios.post(url + '/user/profile', data).then((response) => {
         const result = response.data
         if (result.status === 'success') {
-          alert('Edit Profile Successful')
+          toast.success('Edit Profile Successful')
           // console.log("response B date" + result.data.birthDate)
           localStorage.setItem('loginUser', JSON.stringify(result.data));
           history.push('/dashboard/myprofile')
         } else {
-          alert('Something went wrong')
+          toast.error('Something went wrong')
         }
       })
     }
@@ -110,7 +111,7 @@ const EditProfile = () => {
 
   const addProfilePicture = () => {
     if (profilePicture.length === 0) {
-      alert('Select Profile Picture')
+      toast.error('Select Profile Picture')
     } else {
       const data = new FormData()
       data.append('email', email)
@@ -119,10 +120,10 @@ const EditProfile = () => {
       axios.post(url + '/user/profilepicture', data).then((response) => {
         const result = response.data
         if (result.status === 'success') {
-          alert('Edit Profile Successful')
+          toast.success('Edit Profile Successful')
           localStorage.setItem('loginUser', JSON.stringify(result.data));
         } else {
-          alert('Something went wrong')
+          toast.error('Something went wrong')
         }
       })
     }

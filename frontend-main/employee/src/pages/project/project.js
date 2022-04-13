@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { url } from '../../commons/constants'
 import '../cards.css'
+import { toast} from "react-toastify"
 
 const Project = () => {
 
@@ -16,7 +17,7 @@ const Project = () => {
   const emp = JSON.parse(localStorage.getItem('loginUser'));
   const getProject = () => {
     if (emp.email.length === 0) {
-      alert('Select email')
+      toast.error('Select email')
     } else {
       const data = new FormData()
 
@@ -31,7 +32,7 @@ const Project = () => {
           // localStorage.setItem('project', JSON.stringify(result.data))
           // console.log(result.data)
         } else {
-          alert('error while loading list of project')
+          toast.error('error while loading list of project')
         }
       })
     }

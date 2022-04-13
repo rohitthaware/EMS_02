@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
 import { url } from '../../commons/constants'
 import '../signup.css'
+import { toast} from 'react-toastify'
 
 
 const SubmitTask = () => {
@@ -47,7 +48,7 @@ const SubmitTask = () => {
 
     if (tReport.length > 200) {
       console.log("44444")
-      alert('Report should be less than 200 Words')
+      toast.error('Report should be less than 200 Words')
     } else {
 
 
@@ -61,10 +62,10 @@ const SubmitTask = () => {
       axios.post(url + '/admin/submittask', data).then((response) => {
         const result = response.data
         if (result.status === 'success') {
-          alert('Task Submitted Successfully')
+          toast.success('Task Submitted Successfully')
           history.push('/dashboard/mytask')
         } else {
-          alert('Something went wrong')
+          toast.error('Something went wrong')
         }
       })
     }

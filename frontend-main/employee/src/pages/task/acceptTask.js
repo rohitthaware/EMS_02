@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { url } from '../../commons/constants'
 import '../cards.css'
+import { toast } from 'react-toastify'
 
 const AcceptTask = () => {
   const [acceptStatus] = useState('accepted')
@@ -35,7 +36,7 @@ const AcceptTask = () => {
         localStorage.setItem('AcceptTask', JSON.stringify(result.data));
         // console.log(result.data)
       } else {
-        alert('error while loading list of accept task ')
+        toast.error('error while loading list of accept task ')
       }
     })
   }
@@ -51,10 +52,10 @@ const AcceptTask = () => {
       const result = response.data
       console.log(result);
       if (result.status === 'success') {
-        alert("Task Rejected Successful")
+        toast.success("Task Rejected Successful")
         history.push('/dashboard/mytask')
       } else {
-        alert('error while loading list of accept task ')
+        toast.error('error while loading list of accept task ')
       }
     })
   }
@@ -71,10 +72,10 @@ const AcceptTask = () => {
       const result = response.data
       console.log(result);
       if (result.status === 'success') {
-        alert("Task Accepted")
+        toast.success("Task Accepted")
         history.push('/dashboard/mytask')
       } else {
-        alert('error while loading list of accept task ')
+        toast.error('error while loading list of accept task ')
       }
     })
   }

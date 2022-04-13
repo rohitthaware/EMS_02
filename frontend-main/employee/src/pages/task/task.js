@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { url } from '../../commons/constants'
 import '../cards.css'
+import { toast} from 'react-toastify'
 
 const Task = () => {
   const [tasks, setTasks] = useState([])
@@ -16,7 +17,7 @@ const Task = () => {
   const emp = JSON.parse(localStorage.getItem('loginUser'));
   const getTasks = () => {
     if (emp.email.length === 0) {
-      alert('Select email')
+      toast.error('Select email')
     } else {
       const data = new FormData()
       data.append('empId', emp.empId)
@@ -29,7 +30,7 @@ const Task = () => {
           // localStorage.setItem('Task', JSON.stringify(result.data));
           // console.log(result.data)
         } else {
-          alert('error while loading list of task')
+          toast.error('error while loading list of task')
         }
       })
     }

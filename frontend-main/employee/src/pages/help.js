@@ -11,7 +11,7 @@ const Help = () => {
         <tr><th>Tel-Phone </th><td>:-</td><td>(800) 628-4664 </td></tr>
         <tr><th>Technical Support</th><td>:-</td><td>(800) 628-4651 </td></tr>
         <tr><th>LinkedIn</th><td>:-</td><td>LinkedIn.com/companyname </td></tr>
-        <tr><th>Address</th><td>:-</td><td>hinjewadi pune, Maharashtra</td></tr>
+        <tr><th>Address</th><td>:-</td><td>Magarpatta Pune, Maharashtra</td></tr>
       </table>
       </div>
       </div>

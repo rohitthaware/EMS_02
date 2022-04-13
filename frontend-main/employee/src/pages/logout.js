@@ -1,12 +1,13 @@
 import { useHistory } from 'react-router-dom'
 import './cards.css'
+import { toast} from 'react-toastify'
 
 const Logout = () => {
   const history = useHistory()
 
   const signout = () => {
     localStorage.clear()
-    alert('LogOut Successful')
+    toast.success('LogOut Successful')
   }
   const cancle = () => {
     history.push('/dashboard/home')
