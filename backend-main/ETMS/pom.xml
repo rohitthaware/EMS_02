@@ -8,11 +8,11 @@
 		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sunbeam.project.etms</groupId>
-	<artifactId>ETMS</artifactId>
+	<groupId>com.app.project.ems</groupId>
+	<artifactId>EMS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ETMS</name>
-	<description>Project ETMS</description>
+	<name>EMS</name>
+	<description>Project Employee Management System</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
