@@ -96,7 +96,7 @@ const Addproject = () => {
   return (
     <div class="cardSignup">
       <div className="row">
-        <h2><center> Add Project </center> </h2>
+        <h2><center> Add Project </center> </h2><br/><br/><br/>
         <div className="col">
           <label class="input-label">Project Name</label><br></br>
           <input

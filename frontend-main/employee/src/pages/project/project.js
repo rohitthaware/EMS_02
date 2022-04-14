@@ -41,7 +41,7 @@ const Project = () => {
   return (
     <div className="card-project">
       <h1 className="page-title">Project</h1>
-      <table className="table table-striped">
+      <table className="table table-dark table-hover">
         <thead>
           <tr>
             <th>id</th>

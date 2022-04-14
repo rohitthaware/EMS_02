@@ -17,7 +17,7 @@ const Profile = () => {
 
   return (
     <div className="cardSignup">
-      <table class="table table-success table-striped">
+      <table class="table table-dark table-hover">
         <tbody>
           <tr> <th scope="row" colSpan="3" ><center><h3>Employee Info</h3></center> </th> </tr>
           <tr> <td scope="row" colSpan="2">
@@ -25,7 +25,7 @@ const Profile = () => {
               alt="profile"
               className="thumbnail-sm" />
           </td> <td align="right" valign="middle">
-              <Link to="/dashboard/editProfile" className="Link"><button className="btn btn-info">Edit Profile</button> </Link>
+              <Link to="/dashboard/editProfile" className="Link"><button className="btn btn-warning">Edit Profile</button> </Link>
             </td> </tr>
           <tr> <th scope="row">Employee Id</th> <td>:-</td>  <td>{emp.empId} </td> </tr>
           <tr> <th scope="row">Name</th> <td>:-</td> <td>{emp.firstName} {emp.lastName}</td>  </tr>

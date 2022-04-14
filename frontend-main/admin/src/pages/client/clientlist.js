@@ -32,7 +32,7 @@ const ClientList = () => {
   return (
     <div>
       <h1 className="page-title">Clients</h1>
-      <table className="table table-striped">
+      <table className="table table-dark table-hover">
         <thead>
           <tr>
             <th>Id</th>

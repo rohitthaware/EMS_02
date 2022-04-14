@@ -22,9 +22,9 @@ const Signin = () => {
       toast.error('Invalid Credentials')
      
     } else if (password.length === 0) {
-      toast.warning('Invalid Credentials')
+      toast.error('Invalid Credentials')
     } else if (!validateEmail(email)) {
-      toast.warning('Invalid Credentials')
+      toast.error('Invalid Credentials')
     } else {
       // when a file needs to be uploaded use FormData
       const data = new FormData()
@@ -38,12 +38,12 @@ const Signin = () => {
         const result = response.data
         console.log(result)
         if (result.status === 'success') {
-          toast.warning(' LogIn Successful')
+          toast.success(' LogIn Successful')
           
           localStorage.setItem('loginUser', JSON.stringify(result.data));
           history.push('/dashboard/home')
         } else {
-          toast.warning(' LogIn  Failed!!')
+          toast.error(' LogIn  Failed!!')
           
         }
       })

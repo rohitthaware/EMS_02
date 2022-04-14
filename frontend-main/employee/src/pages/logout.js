@@ -17,16 +17,16 @@ const Logout = () => {
     <div className="card-logout">
       <br></br><br></br>
       <div className="mb-3">
-        <div className="cardlogout-image"></div>
+        <div className=""></div>
         <br></br><br></br>
-        <label className="input-label"><b>Are you sure you want to logout?</b></label><br></br>
+        <h2><label className="input-label"><b>Logging Out?</b></label><br></br></h2>
         <br></br><br></br>
         <a href="/"><button onClick={signout} className="btn btn-success">
-          Log Out
+          Yes
         </button></a>
         &nbsp;&nbsp;&nbsp;
         <button onClick={cancle} className="btn btn-danger">
-          Cancle
+          I'd like to stay
         </button><br></br>
       </div>
     </div>

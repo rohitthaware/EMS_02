@@ -55,21 +55,21 @@ const EditProfile = () => {
   }
 
   const addUserToDB = () => {
-    if (FirstName.length === 0) {
+    if (FirstName.length == 0) {
       toast.error('Enter First Name')
-    } else if (LastName.length === 0) {
+    } else if (LastName.length == 0) {
       toast.error('Enter Last Name')
-    } else if (email.length === 0) {
+    } else if (email.length == 0) {
       toast.error('Enter Email')
-    } else if (gender.length === 0) {
+    } else if (gender.length == 0) {
       toast.error('Enter gender')
-    } else if (contact.length === 0) {
+    } else if (contact.length == 0) {
       toast.error('Enter contact')
-    } else if (address.length === 0) {
+    } else if (address.length == 0) {
       toast.error('Enter address')
-    } else if (birthDate.length === 0) {
+    } else if (birthDate.length == 0) {
       toast.error('Enter birthDate')
-    } else if (securityQuestion.length === 0) {
+    } else if (securityQuestion.length == 0) {
       toast.error('Enter securityQuestion')
     } else if (!validateName(LastName)) {
       toast.error('Invalid Last Name')
@@ -167,7 +167,7 @@ const EditProfile = () => {
       </div><br></br>
       <div className="row">
         <div className="col">
-          <label class="input-label">What is yout favorite place?</label><br></br>
+          <label class="input-label">What is your favorite place?</label><br></br>
           <input
             defaultValue={securityQuestion}
             onChange={(e) => {

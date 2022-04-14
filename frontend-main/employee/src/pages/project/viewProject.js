@@ -22,7 +22,7 @@ const ViewTask = () => {
 
   return (
     <div className="cardSignup">
-      <table class="table table-success table-striped">
+      <table class="table table-dark table-hover">
         <tbody>
           <tr> <th scope="row" colSpan="3" ><center><h3>Project Info</h3></center> </th> </tr>
           <tr> <th scope="row">Project Id</th> <td>:-</td>  <td>{project.project.pId} </td> </tr>

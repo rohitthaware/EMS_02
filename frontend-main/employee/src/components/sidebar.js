@@ -6,7 +6,8 @@ const Sidebar = () => {
         <div id="wrapper">
         <div id="sidebar-wrapper">
             <ul className="sidebar-nav">
-                <li> <div className="img_logo"></div> </li>
+                <li> <div className=""></div> </li>
+                <br/><br/>
                 <li> <Link to="/dashboard/home" className="nav-link">Dashboard</Link> </li>
                 <li> <Link to="/dashboard/mytask" className="nav-link">Task</Link> </li>
                 <li> <Link to="/dashboard/myproject" className="nav-link">Projects</Link> </li>

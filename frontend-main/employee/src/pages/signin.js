@@ -50,8 +50,8 @@ const Signin = () => {
 
   return (
     <div className="card">
-      <div className="card-image">
-        <h3 className="card-heading">Get started</h3>
+      <div className="">
+        <h3 className="card-heading"></h3>
       </div>
       <h1 className="page-title">Login</h1>
 

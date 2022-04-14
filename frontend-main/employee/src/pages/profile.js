@@ -16,7 +16,7 @@ const Profile = () => {
 
   return (
     <div className="cardSignup">
-      <table class="table table-success table-striped">
+      <table class="table table-dark table-hover">
         <tbody>
           <tr> <th scope="row" colSpan="3" ><center><h3>Employee Info</h3></center> </th> </tr>
           <tr> <td colSpan="2">

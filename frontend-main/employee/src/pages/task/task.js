@@ -39,7 +39,7 @@ const Task = () => {
   return (
     <div className="card-task">
       <h1 className="page-title">Tasks</h1>
-      <table className="table table-striped">
+      <table className="table table-dark table-hover">
         <thead>
           <tr>
             <th>Task Id</th>

@@ -5,10 +5,13 @@ import Dashboard from './pages/dashboard';
 import './App.css';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import HeaderComponent from './components/HeaderComponent'
 
 function App() {
   return (
     <div className="background">
+      <HeaderComponent />
+      <div>
       <br />
       <BrowserRouter>
         <div className="container">
@@ -32,6 +35,7 @@ function App() {
         draggable
         pauseOnHover
       />
+      </div>
     </div>
   )
 }
